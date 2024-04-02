@@ -1,0 +1,184 @@
+:root {
+    --bg-color: #ffffff;
+    /* Color de fondo */
+    --primary-color: #027ba0;
+    --secondary-color: #dfd8d3;
+    --third-color: #161616;
+    --third-bis-color: #db4648f2;
+    --bg-input-color: #3e37412c;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanin', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 h2 {
+    color: #FFF;
+}
+
+#banner-compra {
+    background-image: url('https://mudanzasyfletes2001.com.ar/wp-content/uploads/cuanto-dar-de-down-payment-para-un-carro.webp');
+    background-size: cover;
+    /* determina cómo se ajusta el tamaño de la imagen de fondo para cubrir completamente el contenedor */
+    background-position: top;
+    /* coloca la imagen en el centro tanto horizontal como vertical del elemento contenedor */
+    height: 400px;
+        box-shadow: inset 0 0 0 2000px rgba(84, 84, 84, 0.7);
+    /* establece una sombra interna actúa como un filtro. */
+}
+
+/* Estilo para el footer */
+#footer a {
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    padding-left: 30px;
+    text-decoration: none;
+}
+
+/* Estilo para el footer para cuando se pasa el mouse */
+#footer a:hover {
+    text-decoration: underline;
+    color: var(--secondary-color);
+}
+
+.header {
+    background-color: transparent;
+    color: #000000;
+    position: fixed;
+    /* Se utiliza para posicionar un elemento de forma fija en relación con la ventana del navegador, lo que significa que el elemento permanece en la misma posición, incluso cuando se desplaza la página. */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    /* Se utiliza comúnmente en situaciones donde tienes elementos superpuestos, como menús desplegables, ventanas emergentes, elementos flotantes, etc. Al ajustar el z-index, puedes controlar qué elementos aparecen en la parte superior y cuáles quedan ocultos detrás de otros. */
+}
+
+/* Clase Container */
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+
+/* Estilo para la tarjeta del banner */
+.card-banner {
+    margin: 0 auto;
+    /* Se utiliza comúnmente para centrar horizontalmente un elemento dentro de su contenedor. */
+    text-align: center;
+    padding: 160px 0px;
+    /* Aplica un relleno de cero píxeles en la parte superior e inferior del elemento y un relleno de 160 píxeles en los lados izquierdo y derecho. */
+}
+
+.text-banner-compra {
+    margin-bottom: 30px;
+    color: white;
+}
+
+#banner-busqueda-compra {
+margin: 30px 0px;
+text-align: center;
+}
+
+#botones-busqueda-compra {
+    margin: 20px 0px;
+    text-align: center;
+}
+
+.btn {
+    background-color: var(--third-color);
+    margin: 0px 0px;
+    padding: 10px 30px;
+    /* Se aplica un espacio de 10 píxeles a los cuatro lados (arriba, abajo, izquierda y derecha) del elemento. */
+    border-radius: 5px;
+    /* Se establece un radio de curvatura de 10 píxeles para las esquinas del elemento. */
+    color: #FFF;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-compra {
+    margin: 0px 0px;
+    padding: 10px 30px;
+}
+
+.btn-filtro {
+    margin: 0px 5px;
+    padding: 10px 50px;
+}
+
+.btn:hover {
+    background-color: var(--primary-color) !important;
+    /*color: 2px solid var(--secondary-color);*/
+}
+
+/* Estilo para la barra de búsqueda */
+.buscador-auto {
+    background-color: var(--bg-input-color);
+    border: solid white; 
+    border-radius: 5px;
+    color: black;
+    font-size: 16px;
+    height: 45px;
+    outline: none;
+    /* Se utiliza para quitar o eliminar el contorno visible que se muestra alrededor de un elemento cuando este obtiene el foco o se selecciona. */
+    padding: 0px 20px;
+    width: 30%;
+}
+
+.auto-item {
+    border: 1px solid #9c9c9c;
+    border-radius: 10px;
+    width: 300px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* Estilo para el detalle de los ítems */
+.auto-item-detalles {
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 10px;
+}
+
+/* Estilo para el título de las películas */
+.auto-item-detalles-marca-modelo {
+    color:black;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 5px 0px 0px 0px;
+}
+
+/* Estilo para el subtítulo de las películas */
+.auto-item-detalles-adicionales {
+    color: black;
+    font-size: 20px;
+    margin: 10px 0px;
+}
+
+.auto-item-img {
+    width: auto;
+    height: 300px;
+    object-fit: cover;
+    -o-object-fit: cover;
+    display: inline-block;
+}
