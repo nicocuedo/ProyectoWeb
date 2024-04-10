@@ -1,23 +1,12 @@
 :root {
     --bg-color: #ffffff;
-    /* Color de fondo */
     --primary-color: #027ba0;
     --secondary-color: #dfd8d3;
     --third-color: #161616;
     --third-bis-color: #db4648f2;
     --bg-input-color: #3e37412c;
-}
-
-ul {
-    list-style-type: none;
-}
-
-li {
-    display: inline;
-}
-
-body {
-    background-color: var(--bg-color);
+    --ancho-maximo: 1200px;
+    --altura-header:60px;
 }
 
 * {
@@ -26,6 +15,16 @@ body {
     box-sizing: border-box;
     font-family: 'Kanin', sans-serif;
 }
+
+
+ol,ul {
+    list-style: none;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
 
 a {
     text-decoration: none;
@@ -62,8 +61,7 @@ h1 h2 {
 }
 
 .header {
-    background-color: transparent;
-    color: #000000;
+    background-color: var(--third-color);
     position: fixed;
     /* Se utiliza para posicionar un elemento de forma fija en relación con la ventana del navegador, lo que significa que el elemento permanece en la misma posición, incluso cuando se desplaza la página. */
     top: 0;
@@ -73,12 +71,62 @@ h1 h2 {
     /* Se utiliza comúnmente en situaciones donde tienes elementos superpuestos, como menús desplegables, ventanas emergentes, elementos flotantes, etc. Al ajustar el z-index, puedes controlar qué elementos aparecen en la parte superior y cuáles quedan ocultos detrás de otros. */
 }
 
+.nav-bar {
+    width: 100%;
+    height: var(--altura-header);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0 2rem;
+}
+
+.texto-nav {
+    color: white;
+}
+
+.menu-hamb {
+    display: none;
+}
+
+.menu-hamb:checked + .nav-links{
+    height: calc(100vh - var(--altura-header));
+}
+
+.nav-links {
+width: 100%;
+background-color:var(--third-color);
+position: absolute;
+top: var(--altura-header);
+left: 0;
+height: calc(100vh - var(--altura-header));
+display: flex;
+justify-content: flex-start;
+align-items: center;
+flex-direction: column;
+gap: 20px;
+height: 0;
+overflow: hidden;
+
+transition: all 0.5s;
+}
+
+.texto-nav {
+    font-size: 1em;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
 /* Clase Container */
 .container {
     max-width: 1200px;
     margin: 50px auto;
 }
 
+.list-icon {
+    cursor: pointer;
+}
 
 /* Estilo para la tarjeta del banner */
 .card-banner {
@@ -94,6 +142,12 @@ h1 h2 {
     color: white;
 }
 
+.textos-banner {
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+}
+
 #banner-busqueda-compra {
 margin: 30px 0px;
 text-align: center;
@@ -102,6 +156,8 @@ text-align: center;
 #botones-busqueda-compra {
     margin: 20px 0px;
     text-align: center;
+
+    
 }
 
 .btn {
@@ -151,6 +207,9 @@ text-align: center;
     width: 300px;
     cursor: pointer;
     overflow: hidden;
+    margin: auto 10px;
+    box-sizing: border-box;
+    
 }
 
 /* Estilo para el detalle de los ítems */
@@ -177,8 +236,57 @@ text-align: center;
 
 .auto-item-img {
     width: auto;
-    height: 300px;
+    height: 220px;
     object-fit: cover;
     -o-object-fit: cover;
-    display: inline-block;
 }
+
+#lista-autos-compras-generales {
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width:900px){
+    .list-icon{
+        display: none;
+    }
+
+    .nav-links {
+        position: static;
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .texto-nav{
+        background-color: var(--third-color);
+    }
+
+    .texto-nav:hover{
+        color: #027ba0;
+    }
+
+}
+
+.faster-one-regular {
+    font-family: "Faster One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 2rem;
+  }
+
+  .nunito-regular-small {
+    font-family: "Nunito", system-ui;
+    font-weight: bold;
+    font-style: normal;
+    color: white;
+    font-size: 1rem;
+  }
+  
