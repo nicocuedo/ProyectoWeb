@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="logo">
+                <a href="/">
+
+                </a>
+            </div>
+        
+            <ul class="nav-links">
+                <li>
+                    <a href="#comprar">Comprá tu auto</a>
+                </li>
+                <li>
+                    <a href="./vende-tu-auto.html">Vende tu auto</a>
+                </li>
+                <li>
+                    <a href="#nosotros">Sobre Nosotros</a>
+                </li>
+                <li>
+                    <a href="#registro">Registrate</a>
+                </li>
+                <li>
+                    <a href="#">Iniciar sesión</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- main -->
+    <main>
+        <!-- banner de la pagina de ventas -->
+        <section id="banner-venta">
+            <h1>¿queres vender tu auto?</h1>
+            <h2>Nosotros te lo compramos</h2>
+            <!-- boton para realizar la cotizacion de un auto -->
+            <a class="btn-cotizar" href="#">Cotizar</a>
+        </section>
+        <!-- formulario sobre los datos del auto que quieren cotizar, para luego vender -->
+        <section id="form-wrapper">
+            <h2>VENDE TU USADO</h2>
+            <h4>Ingresa tus datos y los de tu vehiculo</h4>
+            <!-- formulario -->
+            <form action="#" method="get" id="form-cotizacion">
+              <!-- Marca -->
+                <div class="form-control">
+                    <label for="">Marca</label>
+                   <select name="Marca" id="Marca" class="form-seleccion" NOVALIDATE>
+                    <option value="Audi">Audi</option>
+                    <option value="Chevrolet">Chevrolet</option>
+                    <option value="Chrysler">Chrysler</option>
+                    <option value="Citroen">Citroen</option>
+                    <option value="Ds Automobiles">Ds Automobiles</option>
+                    <option value="Fiat">Fiat</option>
+                    <option value="Ford">Ford</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Hyundai">Hyundai</option>
+                    <option value="Kama">Kama</option>
+                    <option value="Kia">Kia</option>
+                    <option value="Mini Cooper">Mini Cooper</option>
+                    <option value="Mitsubishi">Mitsubishi</option>
+                    <option value="Nissan">Nissan</option>
+                    <option value="Peugeot">Peugeot</option>
+                    <option value="Renault">Renault</option>
+                    <option value="Seat">Seat</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Volskwagen">Volskwagen</option>
+                   </select>
+                </div>
+                <!-- Modelo -->
+                <div class="form-control">
+                    <label for="">Modelo</label>
+                    <input type="text" name="Modelo" id="Modelo" required>
+                </div>
+                <div class="form-control">
+                    <label for="">Año</label>
+                    <select name="Año" id="Año" class="form-seleccion" novalidate>
+                    <option value="15">2015</option>
+                    <option value="16">2016</option>
+                    <option value="17">2017</option>
+                    <option value="18">2018</option>
+                    <option value="19">2019</option>
+                    <option value="20">2020</option>
+                    <option value="21">2021</option>
+                    <option value="22">2022</option>
+                    <option value="23">2023</option>
+                    <option value="24">2024</option>
+                    </select>
+                </div>
+                <!-- version del auto -->
+                <div>
+                    <label for="">Version</label>
+                    <input type="text" name="version" id="version" required>
+                </div>
+                <!-- kilometros del auto -->
+                <div>
+                    <label for="">Kilometros</label>
+                    <input type="text" name="Kilometros" id="Kilometros" required>
+                </div>
+            </form>
+        </section>
+
+        <!-- Datos de la persona que quiere cotizar su vehiculo -->
+        <section>
+            <!-- formulario para los datos de la persona -->
+            <form action="#" method="get" class="form-cotizacion">
+                <!-- Nombre -->
+            <div>
+                <label for="">Nombre</label>
+                <input type="text" name="Nombre" id="Nombre" required>
+            </div>
+            <!-- Apellido -->
+            <div>
+                <label for="">Apellido</label>
+                <input type="text" name="Apellido" id="Apellido" required>
+            </div>
+            
+            <!-- Email -->
+            <div>
+                <label for="">Email</label>
+                <input type="email" name="Email" id="Email">
+            </div>
+            <!-- Telefono -->
+            <div>
+                <label for="">Telefono</label>
+                <input type="text" name="Telefono" id="Telefono" required>
+            </div>
+                <button type="submit">Solicitar Cotizacion</button>
+            </form>
+            
+        </section>
+    </main>
+    <footer>
+        <a href="">Comprá tu auto</a>
+        <a href="">Vendé tu auto</a>
+        <a href="">Sedes</a>
+        <a href="">Trabaja con nosotros</a>
+        <a href="">Libro de quejas</a>
+        <a href="">Contactate con nosotros</a>
+        <a href="">LOGOS REDES SOCIALES</a>
+    </footer>
+</body>
+</html>
