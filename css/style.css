@@ -289,4 +289,24 @@ text-align: center;
     color: white;
     font-size: 1rem;
   }
-  
+  /* agos css */
+  /* ventas agos */
+
+.text-banner-venta {
+    margin-bottom: 30px;
+    color: white;
+}
+.btn-ventas {
+    margin: 0px 0px;
+    padding: 10px 30px;
+}
+#banner-venta {
+    background-image: url('https://mudanzasyfletes2001.com.ar/wp-content/uploads/cuanto-dar-de-down-payment-para-un-carro.webp');
+    background-size: cover;
+    /* determina cómo se ajusta el tamaño de la imagen de fondo para cubrir completamente el contenedor */
+    background-position: top;
+    /* coloca la imagen en el centro tanto horizontal como vertical del elemento contenedor */
+    height: 400px;
+        box-shadow: inset 0 0 0 2000px rgba(84, 84, 84, 0.7);
+    /* establece una sombra interna actúa como un filtro. */
+}
