@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    a
      <!-- AGREGADO POR NICO -->
      <link rel="stylesheet" href="./css/style.css">
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Faster+One&display=swap" rel="stylesheet">
     <!-- AGREGADO POR NICO -->
+    <!-- script fontawesome -->
+    <script src="https://kit.fontawesome.com/04844f94bb.js" crossorigin="anonymous"></script>
 
 
     <title>Document</title>
@@ -71,115 +72,144 @@
 
     <!-- main -->
     <main>
-        <!-- banner de la pagina de ventas -->
         <section id="banner-venta">
-            <h1>¿queres vender tu auto?</h1>
-            <h2>Nosotros te lo compramos</h2>
-            <!-- boton para realizar la cotizacion de un auto -->
-            <a class="btn-cotizar" href="#">Cotizar</a>
-        </section>
+            <div class="card-banner container">
+                <h1 class="text-banner-venta"> ¿Queres vender tu usado?</h1>
+                <a class="btn btn-venta" href="#formulario">Cotizar</a>
+            </div>
+         </section>
+<!-- cartas de presentacion -->
+<section class="body-card">
+    <div class="container-card">
+        <div class="card">
+            <figure>
+                <img src="img/cards.jpg" >
+            </figure>
+            <div class="contenido">
+                <h3>Cotizacion</h3>
+                <p>Vendé tu auto desde tu celular en la comodidad de tu casa. No es necesario que compres otro auto.</p>
+            </div>
+        </div>
+        <div class="card">
+            <figure>
+                <img src="img/cards.jpg" >
+            </figure>
+            <div class="contenido">
+                <h3>Peritaje</h3>
+                <p>Concretamos una cita para verificar tu auto en 15 minutos y sin costo.</p>
+            </div>
+        </div>
+        <div class="card">
+            <figure>
+                <img src="img/cards.jpg" >
+            </figure>
+            <div class="contenido">
+                <h3>Pago</h3>
+                <p>Nos ocupamos de todos los trámites y te transferimos el dinero.</p>
+            </div>
+        </div>
+    
+    </div>
+</section>
         <!-- formulario sobre los datos del auto que quieren cotizar, para luego vender -->
-        <section id="form-wrapper">
-            <h2>VENDE TU USADO</h2>
-            <h4>Ingresa tus datos y los de tu vehiculo</h4>
-            <!-- formulario -->
-            <form action="#" method="get" id="form-cotizacion">
-              <!-- Marca -->
-                <div class="form-control">
-                    <label for="">Marca</label>
-                   <select name="Marca" id="Marca" class="form-seleccion" NOVALIDATE>
-                    <option value="Audi">Audi</option>
-                    <option value="Chevrolet">Chevrolet</option>
-                    <option value="Chrysler">Chrysler</option>
-                    <option value="Citroen">Citroen</option>
-                    <option value="Ds Automobiles">Ds Automobiles</option>
-                    <option value="Fiat">Fiat</option>
-                    <option value="Ford">Ford</option>
-                    <option value="Honda">Honda</option>
-                    <option value="Hyundai">Hyundai</option>
-                    <option value="Kama">Kama</option>
-                    <option value="Kia">Kia</option>
-                    <option value="Mini Cooper">Mini Cooper</option>
-                    <option value="Mitsubishi">Mitsubishi</option>
-                    <option value="Nissan">Nissan</option>
-                    <option value="Peugeot">Peugeot</option>
-                    <option value="Renault">Renault</option>
-                    <option value="Seat">Seat</option>
-                    <option value="Toyota">Toyota</option>
-                    <option value="Volskwagen">Volskwagen</option>
-                   </select>
-                </div>
-                <!-- Modelo -->
-                <div class="form-control">
-                    <label for="">Modelo</label>
-                    <input type="text" name="Modelo" id="Modelo" required>
-                </div>
-                <div class="form-control">
-                    <label for="">Año</label>
-                    <select name="Año" id="Año" class="form-seleccion" novalidate>
-                    <option value="15">2015</option>
-                    <option value="16">2016</option>
-                    <option value="17">2017</option>
-                    <option value="18">2018</option>
-                    <option value="19">2019</option>
-                    <option value="20">2020</option>
-                    <option value="21">2021</option>
-                    <option value="22">2022</option>
-                    <option value="23">2023</option>
-                    <option value="24">2024</option>
-                    </select>
-                </div>
-                <!-- version del auto -->
-                <div>
-                    <label for="">Version</label>
-                    <input type="text" name="version" id="version" required>
-                </div>
-                <!-- kilometros del auto -->
-                <div>
-                    <label for="">Kilometros</label>
-                    <input type="text" name="Kilometros" id="Kilometros" required>
-                </div>
-            </form>
-        </section>
-
-        <!-- Datos de la persona que quiere cotizar su vehiculo -->
-        <section>
-            <!-- formulario para los datos de la persona -->
-            <form action="#" method="get" class="form-cotizacion">
-                <!-- Nombre -->
-            <div>
-                <label for="">Nombre</label>
-                <input type="text" name="Nombre" id="Nombre" required>
+        <section class="formulario" id="formulario">
+            <div class="content">
+                <h1 class="logotipo-form-ventas">Vende tu Usado</h1>
             </div>
-            <!-- Apellido -->
-            <div>
-                <label for="">Apellido</label>
-                <input type="text" name="Apellido" id="Apellido" required>
+            <div class="form-wrapper">
+                <div class="contact-form">
+                    <h3>Ingresa tus datos y los de tu vehiculo</h3>
+                    <form action="">
+                        <!-- grupo:nombre -->
+                        <p>
+                            <label for="Nombre">Nombre</label>
+                            <input type="text" name="Nombre" id="Nombre">
+                        </p>
+                        <!-- grupo:Marca -->
+                        <p>
+                            <label for="Marca">Marca</label>
+                            <input type="text" name="Marca" id="Marca">
+                        </p>
+                        <!-- grupo:Apellido -->
+                        <p>
+                            <label for="Apellido">Apellido</label>
+                            <input type="text" name="Apellido" id="Apellido">
+                        </p>
+                        <!-- grupo:Modelo -->
+                        <p>
+                            <label for="Modelo">Modelo</label>
+                            <input type="text" name="Modelo" id="Modelo">
+                        </p>
+                        <!-- grupo:Email -->
+                        <p>
+                            <label for="Email">Email</label>
+                            <input type="email" name="Email" id="Email">
+                        </p>
+                        <!-- grupo:Año -->
+                        <p>
+                            <label for="Año">Año</label>
+                            <input type="text" name="Año" id="Año">
+                        </p>
+                        <!-- grupo:Telefono -->
+                        <p>
+                            <label for="Telefono">Telefono</label>
+                            <input type="text" name="Telefono" id="Telefono">
+                        </p>
+                        <!-- grupo:version -->
+                        <p>
+                            <label for="Version">Version</label>
+                            <input type="text" name="Version" id="Version">
+                        </p>
+                        <!-- grupo:Domiciolio -->
+                        <p>
+                            <label for="Domicilio">Domicilio</label>
+                            <input type="text" name="Domicilio" id="Domicilio">
+                        </p>
+                        <!-- grupo:Kilometros -->
+                        <p>
+                            <label for="Kilometros"> Kilometros</label>
+                            <input type="text" name="Kilometros" id="Kilometros">
+                        </p>
+                        <p class="block">
+                            <button type="submit">Solicitar Cotizacion</button>
+                        
+                        </p>
+                            
+                    </form>
+                </div>
             </div>
-            
-            <!-- Email -->
-            <div>
-                <label for="">Email</label>
-                <input type="email" name="Email" id="Email">
-            </div>
-            <!-- Telefono -->
-            <div>
-                <label for="">Telefono</label>
-                <input type="text" name="Telefono" id="Telefono" required>
-            </div>
-                <button type="submit">Solicitar Cotizacion</button>
-            </form>
-            
         </section>
     </main>
-    <footer>
-        <a href="">Comprá tu auto</a>
-        <a href="">Vendé tu auto</a>
-        <a href="">Sedes</a>
-        <a href="">Trabaja con nosotros</a>
-        <a href="">Libro de quejas</a>
-        <a href="">Contactate con nosotros</a>
-        <a href="">LOGOS REDES SOCIALES</a>
+    <footer class="footer">
+        
+       <div class="containerfooter">
+        <div class="box">
+            <h4>DIRECCIÓN</h4>
+            <p>Av.Colón 3950,Córdoba, Argentina</p>
+        </div>
+        <div class="box">
+            <h4>CONTACTO</h4>
+            <p>0810-888-62478</p>
+        </div>
+        <div class="box">
+            <h4>HORARIO DE ATENCIÓN</h4>
+            <p>Lunes a Viernes:</p>
+            <p>08:30 a 19:00 hs.</p>
+            <p>Sabados:</p>
+            <p>9:00 a 14:00 hs.</p>
+        </div>
+        <div class="box">
+            <h4>¡SEGUINOS!</h4>
+            <div class="red-social">
+                
+                <a href="#" class="fa fa-facebook" ></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-twitter"></a>
+            </div>
+        </div>
+   </div>
+    
     </footer>
 </body>
 </html>
