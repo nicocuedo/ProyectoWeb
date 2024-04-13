@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Maipu Cars</title>
+    
+         <!-- Favicon -->
+        <link rel="icon" href="./img/car_icon.ico">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="./css/estilos.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Faster+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="contenedor">
+        <header class="encabezado">
+            <div>
+                <a href="./index.html" class="faster-one-regular" >MAIPU</a>
+                <a href="./index.html" class="nunito-regular-small" >CARS</a>
+            </div>
+        </header>
+
+        <!-- Principal -->
+        <main class="contenido">
+            <h1></h1>
+              <form>
+                <input type="radio" id="manual" name="fav_language" value="Manual">
+                <label for="manual">Manual</label><br>
+                <input type="radio" id="automatico" name="fav_language" value="Automatico">
+                <label for="automatico">Automatico</label><br>
+                
+              </form>
+            <br>
+            <form>
+                <label for="gsearch">Marca:</label>
+                <input list="marca">
+                    <datalist id="marca">
+                      <option value="Ferrari">
+                      <option value="Lamborgini">
+                      <option value="Porsche">
+                      <option value="Mercedes">
+                      <option value="....looser">
+                    </datalist>
+                <!--- <label for="gsearch">Marca:</label>
+                <input type="search" id="gsearch" name="gsearch"> -->
+           </form>
+            
+        </main>
+        
+        <aside class="sidebar">
+            <iframe  src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+            
+        </aside>
+
+        <div class="widget-1">
+                <img class="auto-1" src="./img/a1.png" usemap="#autoparte"  alt="auto-1">
+                <map name="autoparte">
+                    <area shape="rect" coords="34,44,270,350" alt="rueda" href="./img/rueda.PNG">
+                </map>.
+                <div class="auto-item-detalles">
+                    <p class="auto-item-detalles-marca-modelo">Lamborgini</p>
+                    <p class="auto-item-detalles-marca-modelo"></p>
+                    <p class="auto-item-detalles-adicionales">2024  0 km</p>
+                </div>
+        </div>
+        
+        <div class="widget-2">
+            <img class="auto-1" src="./img/a2.png" alt="auto-2">
+            <div class="auto-item-detalles">
+                <p class="auto-item-detalles-marca-modelo">Ferrari</p>
+                <p class="auto-item-detalles-marca-modelo"></p>
+                <p class="auto-item-detalles-adicionales">2024  0 km</p>
+            </div>
+        </div>
+
+        <div class="widget-3">
+            <img class="auto-1" src="./img/a3.png" alt="auto-3">
+            <div class="auto-item-detalles">
+                <p class="auto-item-detalles-marca-modelo">Ferrari</p>
+                <p class="auto-item-detalles-marca-modelo">Amarilla</p>
+                <p class="auto-item-detalles-adicionales">2024  0 km</p>
+            </div>
+
+        </div>
+           <!-- Footer -->
+ 
+        <footer class="pie">
+            <h3>Pie de pagina</h3>
+        </footer>
+    </div>
+ 
+</body>
+</html>
