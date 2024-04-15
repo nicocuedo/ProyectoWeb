@@ -2,9 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <!-- AGREGADO POR NICO -->
+
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,7 +13,6 @@
       href="https://fonts.googleapis.com/css2?family=Faster+One&display=swap"
       rel="stylesheet"
     />
-    <!-- AGREGADO POR NICO -->
     <!-- script fontawesome -->
     <script
       src="https://kit.fontawesome.com/04844f94bb.js"
@@ -20,6 +20,7 @@
     ></script>
   </head>
   <body>
+    <!---------------- Header ---------------->
     <header class="header">
       <nav class="nav-bar">
         <div>
@@ -46,7 +47,7 @@
 
         <ul class="nav-links">
           <li>
-            <a class="texto-nav" href="#comprar">
+            <a class="texto-nav" href="compra-tu-auto.html">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -83,7 +84,7 @@
             </a>
           </li>
           <li>
-            <a class="texto-nav" href="./como-funciona.html">
+            <a class="texto-nav" href="#nosotros">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -124,102 +125,19 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <section id="banner-busqueda-compra">
-        <div id="botones-busqueda-compra">
-          <input
-            class="buscador-auto"
-            type="text"
-            placeholder="Escribi marca o modelo..."
-          />
-          <a class="btn btn-filtro" href="#">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-search"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
-              />
-            </svg>
-          </a>
-        </div>
-      </section>
 
-      <section class="container">
-        <div class="container-stock">
-          <div class="stock">
-            <figure>
-              <img src="img/tracker.jpg" />
-            </figure>
-            <div class="contenido">
-              <h3>Chevrolet Tracker Premier</h3>
-              <p>2018 - 70.000KM - Manual</p>
-              <p class="precio">$12.000.000</p>
-              <button>Ver mas</button>
-            </div>
-          </div>
-          <div class="stock">
-            <figure>
-              <img src="img/s10 2020.jpg" />
-            </figure>
-            <div class="contenido">
-              <h3>Chevrolet S10 LS 4X2 LTZ</h3>
-              <p>2020 - 112.000KM - Manual</p>
-              <p class="precio">$28.000.000</p>
-              <button>Ver mas</button>
-            </div>
-          </div>
-          <div class="stock">
-            <figure>
-              <img src="img/t-cross.jpg" />
-            </figure>
-            <div class="contenido">
-              <h3>Volkswagen T-Cross Highline</h3>
-              <p>2021 - 30.000KM - Automatica</p>
-              <p class="precio">$38.000.000</p>
-              <button>Ver mas</button>
-            </div>
-          </div>
-          <div class="stock">
-            <figure>
-              <img src="img/jeep.jpg" />
-            </figure>
-            <div class="contenido">
-              <h3>Jeep Renegade Loguitude</h3>
-              <p>2020 - 24.000KM - Automatica</p>
-              <p class="precio">$23.000.000</p>
-              <button>Ver mas</button>
-            </div>
-          </div>
-          <div class="stock">
-            <figure>
-              <img src="img/ford ranger 0km xl.jpg" />
-            </figure>
-            <div class="contenido">
-              <h3>Ford Ranger Xl 4x4</h3>
-              <p>2023 - 0KM - Automatica</p>
-              <p class="precio">$43.000.000</p>
-              <button>Ver mas</button>
-            </div>
-          </div>
-          <div class="stock">
-            <figure>
-              <img src="img/tracker 0km.jpg" />
-            </figure>
-            <div class="contenido">
-              <h3>Chverolet LTZ</h3>
-              <p>2023 - 0KM - Automatica</p>
-              <p class="precio">$53.000.000</p>
-              <button>Ver mas</button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+    <!---------------- Main ---------------->
+
+    <section id="banner-como-funciona">
+      <div class="card-banner container">
+        <h4 class="text-banner-como-funciona">Cómo funciona</h4>
+        <h4 class="text-banner-como-funciona">MAIPU CARS</h4>
+      </div>
+    </section>
+    <section><a class="btn btn-compra" href="#">Comprá tu auto</a></section>
+
+    <!---------------- Footer ---------------->
+
     <footer class="footer">
       <div class="containerfooter">
         <div class="box">
