@@ -625,6 +625,7 @@ h1 h2 {
 .container-como-funciona-compra-vende {
   display: flex; /* Usa flexbox para alinear los elementos */
   align-items: center; /* Centra verticalmente el contenido de los elementos */
+  position: relative; /* Establece posición relativa para poder posicionar el pseudo-elemento */
 }
 
 .como-funciona-compra-vende-item h2 {
@@ -632,12 +633,29 @@ h1 h2 {
   color: #333; /* Color del texto */
   line-height: 1.6; /* Altura de línea */
   text-align: center; /* Alineación del texto */
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 .como-funciona-compra-vende-item {
   display: flex; /* Utiliza flexbox para alinear los elementos en una fila */
   flex-direction: column; /* Apila los elementos verticalmente */
   align-items: center; /* Centra horizontalmente el contenido */
-  padding: 150px; /* Ajusta el relleno según sea necesario */
+  padding: 170px; /* Ajusta el relleno */
   box-sizing: border-box; /* Incluye el borde en el ancho del elemento */
+}
+.como-funciona-compra-vende-item h1 {
+  margin-top: -100px; /* Puedes ajustar este valor según sea necesario */
+  font-size: 28px; /* Opcional: ajusta el tamaño de la fuente según tus preferencias */
+  background: linear-gradient(120deg, #777672, #72726e);
+  background-repeat: no-repeat;
+  background-size: 100% 25%;
+  background-position: 0 90%;
+}
+
+.container-como-funciona-compra-vende::after {
+  content: "";
+  position: absolute;
+  top: 80px; /* Ajusta la posición inicial de la línea */
+  bottom: 70px; /* Ajusta la posición final de la línea */
+  left: 50%; /* Ubica el pseudo-elemento en el centro horizontal */
+  border-left: 3px solid rgb(83, 80, 80); /* Añade una línea vertical */
 }
