@@ -629,8 +629,8 @@ h1 h2 {
 }
 
 .como-funciona-compra-vende-item h2 {
-  font-size: 16px; /* Tamaño de fuente */
-  color: #333; /* Color del texto */
+  font-size: 16px;
+  color: #333;
   line-height: 1.6; /* Altura de línea */
   text-align: center; /* Alineación del texto */
   margin-bottom: 40px;
@@ -641,6 +641,8 @@ h1 h2 {
   align-items: center; /* Centra horizontalmente el contenido */
   padding: 170px; /* Ajusta el relleno */
   box-sizing: border-box; /* Incluye el borde en el ancho del elemento */
+  text-align: center;
+  margin-bottom: 20px;
 }
 .como-funciona-compra-vende-item h1 {
   margin-top: -100px; /* Puedes ajustar este valor según sea necesario */
@@ -658,4 +660,73 @@ h1 h2 {
   bottom: 70px; /* Ajusta la posición final de la línea */
   left: 50%; /* Ubica el pseudo-elemento en el centro horizontal */
   border-left: 3px solid rgb(83, 80, 80); /* Añade una línea vertical */
+}
+
+/* responsive */
+
+/* Estilos para celulares */
+@media screen and (max-width: 576px) {
+  .text-banner-como-funciona {
+    font-size: 18px; /* Reducir el tamaño de la fuente para celulares */
+    margin-top: -90px; /* Ajustar el margen superior negativo para mover el texto hacia arriba */
+    margin-bottom: 80px;
+  }
+}
+
+/* Estilos para tabletas y computadoras */
+@media screen and (min-width: 577px) {
+  .text-banner-como-funciona {
+    font-size: 36px; /* Aumentar el tamaño de la fuente para tabletas y computadoras */
+    margin-top: -90px; /* Ajustar el margen superior negativo para mover el texto hacia arriba */
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .text-banner-como-funciona {
+    font-size: 24px; /* Reducir el tamaño de la fuente para pantallas pequeñas */
+    margin-top: -90px; /* Ajustar el margen superior negativo para mover el texto hacia arriba */
+    margin-bottom: 80px;
+  }
+}
+
+/* Estilos para pantallas pequeñas como celulares */
+@media screen and (max-width: 576px) {
+  #banner-como-funciona-dos h1 {
+    font-size: 28px; /* Reducir el tamaño de la fuente para pantallas pequeñas */
+  }
+}
+
+/* Estilos para pantallas medianas como tabletas */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  #banner-como-funciona-dos h1 {
+    font-size: 32px; /* Ajuste de tamaño de fuente para tabletas */
+  }
+}
+
+/* Estilos para pantallas medianas y grandes como tabletas y computadoras */
+@media screen and (min-width: 993px) {
+  #banner-como-funciona-dos h1 {
+    font-size: 48px; /* Aumentar el tamaño de la fuente para pantallas grandes */
+  }
+}
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 576px) {
+  #banner-como-funciona {
+    height: 300px; /* Reducir la altura para pantallas pequeñas */
+  }
+}
+
+/* Estilos para pantallas medianas */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  #banner-como-funciona {
+    height: 400px; /* Ajustar la altura para pantallas medianas */
+  }
+}
+
+/* Estilos para pantallas grandes */
+@media screen and (min-width: 993px) {
+  #banner-como-funciona {
+    height: 600px; /* Mantener la altura para pantallas grandes */
+  }
 }
