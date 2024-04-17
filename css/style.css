@@ -673,7 +673,7 @@ h1 h2 {
   }
 }
 
-/* Estilos para tabletas y computadoras */
+/* Estilos para tablet */
 @media screen and (min-width: 577px) {
   .text-banner-como-funciona {
     font-size: 36px; /* Aumentar el tamaño de la fuente para tabletas y computadoras */
@@ -682,6 +682,7 @@ h1 h2 {
   }
 }
 
+/* Estilos para computadoras */
 @media screen and (max-width: 768px) {
   .text-banner-como-funciona {
     font-size: 24px; /* Reducir el tamaño de la fuente para pantallas pequeñas */
@@ -694,17 +695,18 @@ h1 h2 {
 @media screen and (max-width: 576px) {
   #banner-como-funciona-dos h1 {
     font-size: 28px; /* Reducir el tamaño de la fuente para pantallas pequeñas */
+    margin: 20px 0px -50px;
   }
 }
 
-/* Estilos para pantallas medianas como tabletas */
+/* Estilos para pantallas medianas como tablet */
 @media screen and (min-width: 577px) and (max-width: 992px) {
   #banner-como-funciona-dos h1 {
     font-size: 32px; /* Ajuste de tamaño de fuente para tabletas */
   }
 }
 
-/* Estilos para pantallas medianas y grandes como tabletas y computadoras */
+/* Estilos para pantallas medianas y grandes como tablet y computadoras */
 @media screen and (min-width: 993px) {
   #banner-como-funciona-dos h1 {
     font-size: 48px; /* Aumentar el tamaño de la fuente para pantallas grandes */
