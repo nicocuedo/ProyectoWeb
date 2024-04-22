@@ -623,46 +623,58 @@ h1 h2 {
   background-position: 0 90%;
 }
 .container-como-funciona-compra-vende {
-  display: flex; /* Usa flexbox para alinear los elementos */
-  align-items: center; /* Centra verticalmente el contenido de los elementos */
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+  justify-content: center; /* Centra horizontalmente los elementos */
+  text-align: center; /* Centra el texto */
+  padding: 0px; /* Ajusta el relleno */
+  box-sizing: border-box; /* Incluye el borde en el ancho del elemento */
   position: relative; /* Establece posición relativa para poder posicionar el pseudo-elemento */
+  margin: 40px;
+}
+
+.como-funciona-compra-vende-item {
+  flex: 0 1 calc(50% - 40px); /* Establece el ancho de los elementos, dejando espacio entre ellos */
+  margin: 20px; /* Espacio entre los elementos */
+  padding: 20px; /* Ajusta el relleno */
+  background: #908686; /* Color de fondo para destacar los elementos */
+  border-radius: 8px; /* Añade bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Añade sombra */
+}
+
+.como-funciona-compra-vende-item h1 {
+  margin-top: 0; /* Elimina el margen superior */
+  font-size: 24px; /* Tamaño de fuente */
+  padding: 20px;
 }
 
 .como-funciona-compra-vende-item h2 {
-  font-size: 16px;
-  color: #333;
-  line-height: 1.6; /* Altura de línea */
-  text-align: center; /* Alineación del texto */
-  margin-bottom: 40px;
-}
-.como-funciona-compra-vende-item {
-  display: flex; /* Utiliza flexbox para alinear los elementos en una fila */
-  flex-direction: column; /* Apila los elementos verticalmente */
-  align-items: center; /* Centra horizontalmente el contenido */
-  padding: 170px; /* Ajusta el relleno */
-  box-sizing: border-box; /* Incluye el borde en el ancho del elemento */
-  text-align: center;
-  margin-bottom: 20px;
-}
-.como-funciona-compra-vende-item h1 {
-  margin-top: -100px; /* Puedes ajustar este valor según sea necesario */
-  font-size: 28px; /* Opcional: ajusta el tamaño de la fuente según tus preferencias */
-  background: linear-gradient(120deg, #777672, #72726e);
-  background-repeat: no-repeat;
-  background-size: 100% 25%;
-  background-position: 0 90%;
+  font-size: 16px; /* Tamaño de fuente */
+  color: #333; /* Color de texto */
+  margin-bottom: 20px; /* Espacio inferior */
 }
 
 .container-como-funciona-compra-vende::after {
   content: "";
   position: absolute;
-  top: 80px; /* Ajusta la posición inicial de la línea */
-  bottom: 70px; /* Ajusta la posición final de la línea */
-  left: 50%; /* Ubica el pseudo-elemento en el centro horizontal */
-  border-left: 3px solid rgb(83, 80, 80); /* Añade una línea vertical */
+  top: 50%;
+  left: 5%; /* Margen izquierdo */
+  width: 90%; /* Ancho */
+  height: 2px; /* Grosor */
+  background-color: rgb(126, 111, 111); /* Color */
+  transform: translateY(-50%); /* Centra verticalmente */
 }
 
-/* responsive */
+/* Media queries para pantallas medianas */
+@media screen and (max-width: 768px) {
+  .como-funciona-compra-vende-item {
+    flex-basis: calc(
+      100% - 40px
+    ); /* Ancho completo menos el espacio entre elementos */
+  }
+}
+
+/* responsive parar el html como funciona */
 
 /* Estilos para celulares */
 @media screen and (max-width: 576px) {
@@ -730,5 +742,39 @@ h1 h2 {
 @media screen and (min-width: 993px) {
   #banner-como-funciona {
     height: 600px; /* Mantener la altura para pantallas grandes */
+  }
+}
+
+/* Media queries para pantallas medianas */
+@media screen and (max-width: 768px) {
+  .como-funciona-compra-vende-item {
+    flex-basis: calc(
+      100% - 40px
+    ); /* Ancho completo menos el espacio entre elementos */
+  }
+}
+
+/* Media queries para pantallas pequeñas */
+@media screen and (max-width: 576px) {
+  .container-como-funciona-compra-vende {
+    padding: 10px; /* Reduce el relleno */
+  }
+
+  .como-funciona-compra-vende-item {
+    flex-basis: calc(
+      100% - 20px
+    ); /* Ancho completo menos el espacio entre elementos */
+    margin: 10px 0; /* Espacio entre elementos */
+  }
+}
+/* Media query para ajustar el estilo en pantallas más grandes */
+@media screen and (min-width: 768px) {
+  .container-como-funciona-compra-vende::after {
+    top: 80px; /* Ajusta la posición inicial de la línea */
+    bottom: 70px; /* Ajusta la posición final de la línea */
+    left: 50%; /* Ubica el pseudo-elemento en el centro horizontal */
+    width: 3px; /* Ajusta el ancho para que sea una línea vertical */
+    height: auto; /* Restaura la altura automática */
+    transform: translateX(-50%); /* Centra horizontalmente la línea */
   }
 }
