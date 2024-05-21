@@ -895,3 +895,8 @@
   #checkbox {
     width: 5%;
   }
+
+  .google-api {
+    width: 100%;
+    height: 300px;
+  }
