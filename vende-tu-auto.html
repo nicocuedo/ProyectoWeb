@@ -18,9 +18,10 @@
       crossorigin="anonymous"
     ></script>
 
-    <title>Document</title>
+    <title>MAIPU Cars</title>
   </head>
   <body>
+    <!---------------- Header ---------------->
     <header class="header">
       <nav class="nav-bar">
         <div>
@@ -47,7 +48,7 @@
 
         <ul class="nav-links">
           <li>
-            <a class="texto-nav" href="./compra-tu-auto.html">
+            <a class="texto-nav" href="compra-tu-auto.html">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -104,7 +105,7 @@
             </a>
           </li>
           <li class="textos-banner">
-            <a class="texto-nav" href="#">
+            <a class="texto-nav" href="#" id="mensaje-bienvenida">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -131,7 +132,7 @@
       <section id="banner-venta">
         <div class="card-banner container">
           <h1 class="text-banner-venta">¿Queres vender tu usado?</h1>
-          <a class="btn btn-venta" href="#formulario">Cotizar</a>
+          <a class="btn btn-venta" href="#form-venta">Cotizar</a>
         </div>
       </section>
       <!-- cartas de presentacion -->
@@ -175,66 +176,100 @@
         </div>
       </section>
       <!-- formulario sobre los datos del auto que quieren cotizar, para luego vender -->
-      <section class="formulario" id="formulario">
+      <section class="form-venta" id="form-venta">
         <div class="content">
           <h1 class="logotipo-form-ventas">Vende tu Usado</h1>
         </div>
         <div class="form-wrapper">
           <div class="contact-form">
-            <h3>Ingresa tus datos y los de tu vehiculo</h3>
+            <h3>Ingresa tus datos personales y los de tu vehículo</h3>
             <form action="">
               <!-- grupo:nombre -->
               <p>
-                <label for="Nombre">Nombre</label>
+                <label for="Nombre" >Nombre(s) y Apellido(s)</label>
+                <i id="Icono-Nombre"></i>
                 <input type="text" name="Nombre" id="Nombre" />
+                
               </p>
               <!-- grupo:Marca -->
               <p>
                 <label for="Marca">Marca</label>
+                <i id="Icono-Marca"></i>
                 <input type="text" name="Marca" id="Marca" />
               </p>
-              <!-- grupo:Apellido -->
+              <!-- grupo:Apellido 
               <p>
                 <label for="Apellido">Apellido</label>
+                <i id="Icono-Apellido"></i>
                 <input type="text" name="Apellido" id="Apellido" />
-              </p>
+              </p>-->
               <!-- grupo:Modelo -->
               <p>
                 <label for="Modelo">Modelo</label>
+                <i id="Icono-Modelo"></i>
                 <input type="text" name="Modelo" id="Modelo" />
               </p>
               <!-- grupo:Email -->
               <p>
                 <label for="Email">Email</label>
+                <i id="Icono-Email"></i>
                 <input type="email" name="Email" id="Email" />
-              </p>
-              <!-- grupo:Año -->
-              <p>
-                <label for="Año">Año</label>
-                <input type="text" name="Año" id="Año" />
               </p>
               <!-- grupo:Telefono -->
               <p>
                 <label for="Telefono">Telefono</label>
+                <i id="Icono-Telefono"></i>
                 <input type="text" name="Telefono" id="Telefono" />
               </p>
               <!-- grupo:version -->
               <p>
                 <label for="Version">Version</label>
+                <i id="Icono-Version"></i>
                 <input type="text" name="Version" id="Version" />
               </p>
               <!-- grupo:Domiciolio -->
               <p>
                 <label for="Domicilio">Domicilio</label>
+                <i id="Icono-Domicilio"></i>
                 <input type="text" name="Domicilio" id="Domicilio" />
               </p>
               <!-- grupo:Kilometros -->
               <p>
-                <label for="Kilometros"> Kilometros</label>
+                <label for="Kilometros">Kilometros</label>
+                <i id="Icono-Kilometros"></i>
                 <input type="text" name="Kilometros" id="Kilometros" />
               </p>
+              <p>
+                <label for="Año">Año</label> 
+                <br>
+                 <select name="Año" id="Año">
+                  <option value="2010">2010</option>
+                  <option value="2011">2011</option>
+                  <option value="2012">2012</option>
+                  <option value="2013">2013</option>
+                  <option value="2014">2014</option>
+                  <option value="2015">2015</option>
+                  <option value="2016">2016</option>
+                  <option value="2017">2017</option>
+                  <option value="2018">2018</option>
+                  <option value="2019">2019</option>
+                  <option value="2020">2020</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                 </select>
+              </p>
+              <p>
+                <label> Insertar Imagenes</label>
+                <input type="file" name="Imagenes" id="Imagenes" />
+              </p>
+              <div class="terminos-condiciones">
+                <input type="checkbox" name="checkbox" id="checkbox" /> 
+                <label for="checkbox"> En caso de continuar acepto que un vendedor se comunique conmigo</label>
+              </div>
               <p class="block">
-                <button type="submit">Solicitar Cotizacion</button>
+                <button id="btn-solicitar-cotizacion" type="submit">Solicitar Cotizacion</button>
               </p>
             </form>
           </div>
@@ -269,5 +304,7 @@
         </div>
       </div>
     </footer>
+    <script src="js/form-venta.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

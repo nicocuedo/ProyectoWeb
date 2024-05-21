@@ -1,0 +1,16 @@
+{
+    "cuentas": [
+        {
+            "usuario": "Nico",
+            "password": "Nico1234"
+        },
+        {
+            "usuario": "Test",
+            "password": "Test1234!"
+        },
+        {
+            "usuario": "Invitado",
+            "password": "@Invitado"
+        }
+    ]
+}

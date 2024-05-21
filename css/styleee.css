@@ -1,0 +1,868 @@
+:root {
+  --bg-color: #ffffff;
+  --primary-color: #027ba0;
+  --secondary-color: #dfd8d3;
+  --third-color: #161616;
+  --third-bis-color: #db4648f2;
+  --bg-input-color: #3e37412c;
+  --ancho-maximo: 1200px;
+  --altura-header: 60px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kanin", sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 h2 {
+  color: #fff;
+}
+
+#banner-compra {
+  background-image: url("https://mudanzasyfletes2001.com.ar/wp-content/uploads/cuanto-dar-de-down-payment-para-un-carro.webp");
+  background-size: cover;
+  /* determina cómo se ajusta el tamaño de la imagen de fondo para cubrir completamente el contenedor */
+  background-position: top;
+  /* coloca la imagen en el centro tanto horizontal como vertical del elemento contenedor */
+  height: 400px;
+  box-shadow: inset 0 0 0 2000px rgba(84, 84, 84, 0.7);
+  /* establece una sombra interna actúa como un filtro. */
+}
+
+#banner-venta-principal {
+  background-image: url("https://www.cronista.com/files/image/121/121031/5ff76175dc8e5.jpg");
+  background-size: cover;
+  margin-top: 40px;
+  /* determina cómo se ajusta el tamaño de la imagen de fondo para cubrir completamente el contenedor */
+  background-position: top;
+  /* coloca la imagen en el centro tanto horizontal como vertical del elemento contenedor */
+  height: 400px;
+  box-shadow: inset 0 0 0 2000px rgba(84, 84, 84, 0.7);
+  /* establece una sombra interna actúa como un filtro. */
+}
+
+/* Estilo para el footer */
+#footer a {
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  padding-left: 30px;
+  text-decoration: none;
+}
+
+/* Estilo para el footer para cuando se pasa el mouse */
+#footer a:hover {
+  text-decoration: underline;
+  color: var(--secondary-color);
+}
+
+.header {
+  background-color: var(--third-color);
+  position: fixed;
+  /* Se utiliza para posicionar un elemento de forma fija en relación con la ventana del navegador, lo que significa que el elemento permanece en la misma posición, incluso cuando se desplaza la página. */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  /* Se utiliza comúnmente en situaciones donde tienes elementos superpuestos, como menús desplegables, ventanas emergentes, elementos flotantes, etc. Al ajustar el z-index, puedes controlar qué elementos aparecen en la parte superior y cuáles quedan ocultos detrás de otros. */
+}
+
+.nav-bar {
+  width: 100%;
+  height: var(--altura-header);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 0 2rem;
+}
+
+.texto-nav {
+  color: white;
+}
+
+.menu-hamb {
+  display: none;
+}
+
+.menu-hamb:checked + .nav-links {
+  height: calc(100vh - var(--altura-header));
+}
+
+.nav-links {
+  width: 100%;
+  background-color: var(--third-color);
+  position: absolute;
+  top: var(--altura-header);
+  left: 0;
+  height: calc(100vh - var(--altura-header));
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 0;
+  overflow: hidden;
+
+  transition: all 0.5s;
+}
+
+.texto-nav {
+  font-size: 1em;
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+/* Clase Container */
+.container {
+  max-width: 1200px;
+  margin: 5px auto;
+}
+
+.list-icon {
+  cursor: pointer;
+}
+
+/* Estilo para la tarjeta del banner */
+.card-banner {
+  margin: 0 auto;
+  /* Se utiliza comúnmente para centrar horizontalmente un elemento dentro de su contenedor. */
+  text-align: center;
+  padding: 160px 0px;
+  /* Aplica un relleno de cero píxeles en la parte superior e inferior del elemento y un relleno de 160 píxeles en los lados izquierdo y derecho. */
+}
+
+.text-banner-compra {
+  margin-bottom: 30px;
+  color: white;
+}
+
+.textos-banner {
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+}
+
+#banner-busqueda-compra {
+  margin: 40px 0px 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#botones-busqueda-compra {
+  margin: 40px 0px 0px;
+  text-align: center;
+  width: 100%;
+}
+
+.btn {
+  background-color: var(--third-color);
+  margin: 0px 0px;
+  padding: 10px 30px;
+  /* Se aplica un espacio de 10 píxeles a los cuatro lados (arriba, abajo, izquierda y derecha) del elemento. */
+  border-radius: 5px;
+  /* Se establece un radio de curvatura de 10 píxeles para las esquinas del elemento. */
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-compra {
+  margin: 0px 0px;
+  padding: 10px 30px;
+}
+
+.btn-filtro {
+  margin: 0px 1px;
+  padding: 10px 10px;
+}
+
+.btn:hover {
+  background-color: var(--primary-color) !important;
+  /*color: 2px solid var(--secondary-color);*/
+}
+
+/* Estilo para la barra de búsqueda */
+.buscador-auto {
+  background-color: var(--bg-input-color);
+  border: solid white;
+  border-radius: 5px;
+  color: black;
+  font-size: 16px;
+  height: 45px;
+  outline: none;
+  /* Se utiliza para quitar o eliminar el contorno visible que se muestra alrededor de un elemento cuando este obtiene el foco o se selecciona. */
+  padding: 0px 20px;
+  width: 50%;
+}
+
+.auto-item {
+  border: 1px solid #9c9c9c;
+  border-radius: 10px;
+  width: 300px;
+  cursor: pointer;
+  overflow: hidden;
+  margin: auto 10px;
+  box-sizing: border-box;
+}
+
+/* Estilo para el detalle de los ítems */
+.auto-item-detalles {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 10px;
+}
+
+/* Estilo para el título de las películas */
+.auto-item-detalles-marca-modelo {
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 5px 0px 0px 0px;
+}
+
+/* Estilo para el subtítulo de las películas */
+.auto-item-detalles-adicionales {
+  color: black;
+  font-size: 20px;
+  margin: 10px 0px;
+}
+
+.auto-item-img {
+  width: auto;
+  height: 220px;
+  object-fit: cover;
+  -o-object-fit: cover;
+}
+
+#lista-autos-compras-generales {
+  margin-left: 0;
+  margin-right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (min-width: 900px) {
+  .list-icon {
+    display: none;
+  }
+
+  .nav-links {
+    position: static;
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .texto-nav {
+    background-color: var(--third-color);
+  }
+
+  .texto-nav:hover {
+    color: #027ba0;
+  }
+}
+
+.faster-one-regular {
+  font-family: "Faster One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 2rem;
+}
+
+.nunito-regular-small {
+  font-family: "Nunito", system-ui;
+  font-weight: bold;
+  font-style: normal;
+  color: white;
+  font-size: 1rem;
+}
+/* agos css */
+/* ventas agos */
+
+.text-banner-venta {
+  margin-bottom: 30px;
+  color: white;
+}
+.btn-ventas {
+  margin: 0px 0px;
+  padding: 10px 30px;
+}
+#banner-venta {
+  background-image: url("https://cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/V5EVJ5RXDVHLDO4JLUTU7ANNYQ.jpg");
+  background-size: cover;
+  /* determina cómo se ajusta el tamaño de la imagen de fondo para cubrir completamente el contenedor */
+  background-position: top;
+  /* coloca la imagen en el centro tanto horizontal como vertical del elemento contenedor */
+  height: 400px;
+  box-shadow: inset 0 0 0 2000px rgba(84, 84, 84, 0.7);
+  /* establece una sombra interna actúa como un filtro. */
+}
+/* CARD */
+.body-card {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-card {
+  width: 100%;
+  display: flex;
+  max-width: 1100px;
+}
+.card {
+  width: 100%;
+  margin: 20px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: black;
+  box-shadow: 0px 1px 10px rgba(84, 84, 84, 0.7);
+  cursor: default;
+  color: white;
+  transition: all 400ms ease;
+}
+.card:hover {
+  box-shadow: 5px 5px 20px rgba(84, 84, 84, 0.7);
+  transform: translateY(-3%);
+}
+.card img {
+  width: 100%;
+  height: 210px;
+}
+.card .contenido {
+  padding: 15px;
+  text-align: center;
+}
+.card .contenido p {
+  line-height: 1.5;
+}
+.card .contenido h3 {
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+/* FORMULARIO AGOS */
+.formulario {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5em;
+}
+.content {
+  /*max-width: 1170px;*/
+  margin-bottom: auto;
+  margin-left: auto;
+  padding: 1.5em;
+  background-color: black;
+}
+.logotipo-form-ventas {
+  text-align: center;
+  font: size 10em;
+  color: white;
+}
+
+.form-wrapper > * {
+  padding: 1em;
+}
+.contact-form {
+  background-color: black;
+  color: white;
+}
+.contact-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.contact-form form p {
+  margin: 0;
+  padding: 1em;
+}
+.contact-form form .block {
+  grid-column: 1/3;
+}
+.contact-form form button,
+.contact-form form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.7em;
+  border: none;
+  outline: 0;
+  color: white;
+  background: none;
+  border-bottom: 1px solid white;
+}
+.contact-form form button {
+  background: #fff;
+  border: 0;
+  text-transform: uppercase;
+  padding: 1em;
+  color: #161616;
+  width: 100%;
+}
+.contact-form form button:hover,
+.contact-form form button:focus {
+  background: #9c9c9c;
+  color: black;
+  transition: backgraund-color 1s ease-out;
+}
+/* footer agos */
+.footer {
+  width: 100%;
+  background-color: black;
+}
+.footer .containerfooter {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px;
+}
+.footer .containerfooter .box h4 {
+  color: white;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+.footer .containerfooter .box p {
+  color: #efefef;
+  margin-bottom: 10px;
+}
+.footer .containerfooter .red-social a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: white;
+  margin-right: 10px;
+  text-align: center;
+  transition: all 300ms ease;
+}
+.footer .containerfooter .red-social a:hover {
+  color: darkgrey;
+}
+/* agos stock */
+/* CARD */
+.body-stock {
+  width: 100%;
+  height: auto;
+  margin: 50px;
+  /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+}
+.container-stock {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.stock {
+  width: 300px;
+  margin: 20px auto;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: black;
+  box-shadow: 0px 1px 10px rgba(84, 84, 84, 0.7);
+  cursor: default;
+  color: white;
+  transition: all 400ms ease;
+}
+.stock:hover {
+  box-shadow: 5px 5px 20px rgba(84, 84, 84, 0.7);
+  transform: translateY(-3%);
+}
+.stock img {
+  width: 100%;
+  height: auto;
+}
+.stock .contenido {
+  padding: 15px;
+  text-align: center;
+}
+.stock .contenido p {
+  line-height: 1.5;
+}
+
+.container-contactos {
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+#lista-contactos {
+  margin-left: 0;
+  margin-right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacto-item {
+  width: 250px;
+  height: 300px;
+  cursor: pointer;
+  overflow: hidden;
+  margin: auto 10px;
+  padding: 50px 0px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.texto-adicional-contactos {
+  font-weight: normal;
+}
+
+.precio {
+  font-weight: bold;
+}
+
+/* Estilo para el html "como funciona" */
+
+#banner-como-funciona {
+  background-image: url("https://maipuusados.com.ar/wp-content/uploads/sites/5/2021/08/comoFunciona.png.webp");
+  background-size: cover;
+  background-position: top;
+  height: 600px;
+  /* box-shadow: inset 0 0 0 2000px rgba(84, 84, 84, 0.7); */
+}
+
+#banner-como-funciona-dos {
+  margin: 40px 0px 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#banner-como-funciona-dos h1 {
+  font-size: 36px;
+  background: linear-gradient(120deg, #777672, #72726e);
+  background-repeat: no-repeat;
+  background-size: 100% 25%;
+  background-position: 0 90%;
+}
+
+.text-banner-como-funciona {
+  color: white;
+  text-align: left;
+  font-size: 36px;
+  font-weight: 1000;
+}
+
+.container-como-funciona {
+  max-width: 1200px;
+  margin: 80px auto;
+}
+
+.como-funciona-item {
+  width: 250px;
+  height: 300px;
+  cursor: pointer;
+  overflow: hidden;
+  margin: auto 10px;
+  padding: 50px 0px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.texto-adicional-como-funciona {
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+}
+#lista-como-funciona {
+  margin-left: 0;
+  margin-right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#lista-como-funciona .como-funciona-item h2 {
+  background: linear-gradient(120deg, #777672, #72726e);
+  background-repeat: no-repeat;
+  background-size: 100% 25%;
+  background-position: 0 90%;
+}
+.container-como-funciona-compra-vende {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+  justify-content: center; /* Centra horizontalmente los elementos */
+  text-align: center; /* Centra el texto */
+  padding: 0px;
+  box-sizing: border-box; /* Incluye el borde en el ancho del elemento */
+  position: relative; /* Establece posición relativa para poder posicionar el pseudo-elemento */
+  margin: 40px;
+}
+
+.como-funciona-compra-vende-item {
+  flex: 0 1 calc(50% - 40px); /* Establece el ancho de los elementos, dejando espacio entre ellos */
+  margin: 20px;
+  padding: 20px;
+  background: #908686;
+  border-radius: 8px; /* Añade bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Añade sombra */
+}
+
+.como-funciona-compra-vende-item h1 {
+  margin-top: 0; /* Elimina el margen superior */
+  font-size: 24px;
+  padding: 20px;
+}
+
+.como-funciona-compra-vende-item h2 {
+  font-size: 16px; 
+  color: #333;
+  margin-bottom: 20px; /* Espacio inferior */
+}
+
+.container-como-funciona-compra-vende::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 5%; /* Margen izquierdo */
+  width: 90%; /* Ancho */
+  height: 2px; /* Grosor */
+  background-color: rgb(126, 111, 111); /* Color */
+  transform: translateY(-50%); /* Centra verticalmente */
+}
+
+/* Media queries para pantallas medianas */
+@media screen and (max-width: 768px) {
+  .como-funciona-compra-vende-item {
+    flex-basis: calc(
+      100% - 40px
+    ); /* Ancho completo menos el espacio entre elementos */
+  }
+}
+
+/* responsive parar el html como funciona */
+
+/* Estilos para celulares */
+@media screen and (max-width: 576px) {
+  .text-banner-como-funciona {
+    font-size: 18px; /* Reducir el tamaño de la fuente para celulares */
+    margin-top: -90px; /* Ajustar el margen superior negativo para mover el texto hacia arriba */
+    margin-bottom: 80px;
+  }
+}
+
+/* Estilos para tablet */
+@media screen and (min-width: 577px) {
+  .text-banner-como-funciona {
+    font-size: 36px; /* Aumentar el tamaño de la fuente para tabletas y computadoras */
+    margin-top: -90px; /* Ajustar el margen superior negativo para mover el texto hacia arriba */
+    margin-bottom: 80px;
+  }
+}
+
+/* Estilos para computadoras */
+@media screen and (max-width: 768px) {
+  .text-banner-como-funciona {
+    font-size: 24px; /* Reducir el tamaño de la fuente para pantallas pequeñas */
+    margin-top: -90px; /* Ajustar el margen superior negativo para mover el texto hacia arriba */
+    margin-bottom: 80px;
+  }
+}
+
+/* Estilos para pantallas pequeñas como celulares */
+@media screen and (max-width: 576px) {
+  #banner-como-funciona-dos h1 {
+    font-size: 28px; /* Reducir el tamaño de la fuente para pantallas pequeñas */
+    margin: 20px 0px -50px;
+  }
+}
+
+/* Estilos para pantallas medianas como tablet */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  #banner-como-funciona-dos h1 {
+    font-size: 32px; /* Ajuste de tamaño de fuente para tabletas */
+  }
+}
+
+/* Estilos para pantallas medianas y grandes como tablet y computadoras */
+@media screen and (min-width: 993px) {
+  #banner-como-funciona-dos h1 {
+    font-size: 48px; /* Aumentar el tamaño de la fuente para pantallas grandes */
+  }
+}
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 576px) {
+  #banner-como-funciona {
+    height: 300px; /* Reducir la altura para pantallas pequeñas */
+  }
+}
+
+/* Estilos para pantallas medianas */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  #banner-como-funciona {
+    height: 400px; /* Ajustar la altura para pantallas medianas */
+  }
+}
+
+/* Estilos para pantallas grandes */
+@media screen and (min-width: 993px) {
+  #banner-como-funciona {
+    height: 600px; /* Mantener la altura para pantallas grandes */
+  }
+}
+
+/* Media queries para pantallas medianas */
+@media screen and (max-width: 768px) {
+  .como-funciona-compra-vende-item {
+    flex-basis: calc(
+      100% - 40px
+    ); /* Ancho completo menos el espacio entre elementos */
+  }
+}
+
+/* Media queries para pantallas pequeñas */
+@media screen and (max-width: 576px) {
+  .container-como-funciona-compra-vende {
+    padding: 10px; /* Reduce el relleno */
+  }
+
+  .como-funciona-compra-vende-item {
+    flex-basis: calc(
+      100% - 20px
+    ); /* Ancho completo menos el espacio entre elementos */
+    margin: 10px 0; /* Espacio entre elementos */
+  }
+}
+/* Media query para ajustar el estilo en pantallas más grandes */
+@media screen and (min-width: 768px) {
+  .container-como-funciona-compra-vende::after {
+    top: 80px; /* Ajusta la posición inicial de la línea */
+    bottom: 70px; /* Ajusta la posición final de la línea */
+    left: 50%; /* Ubica el pseudo-elemento en el centro horizontal */
+    width: 3px; /* Ajusta el ancho para que sea una línea vertical */
+    height: auto; /* Restaura la altura automática */
+    transform: translateX(-50%); /* Centra horizontalmente la línea */
+  }
+}
+
+
+.login-page {
+
+
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box ;
+  color: white;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background-color: rgb(33 33 33 / 40%);
+  text-align: center;
+  padding: 50px 20px;
+  gap: 30px;
+  width: 400px;
+}
+
+.form-input:focus {
+  border: 3px solid cornflowerblue
+}
+
+.form-item-input{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  
+}
+
+.form-input{
+  background-color: var(--bg-input-color);
+  border: solid white;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  height: 45px;
+  outline: none;
+  padding: 0px 10px;
+  /* Se utiliza para quitar o eliminar el contorno visible que se muestra alrededor de un elemento cuando este obtiene el foco o se selecciona. */
+}
+
+.logo-login{
+  top: 0px;
+  right: 0px;
+  padding: 10px 20px;
+
+}
+
+.img-page{
+background-color: var(--third-color);
+background-image: url(/img/consecionaria.webp);
+background-repeat: no-repeat;
+background-size: cover;
+box-shadow: inset 0 0 0 2000px rgba(84, 84, 84, 0.7);
+}
+
+.green{
+  color:green;
+  font-weight: bold;
+}
+
+.red{
+  color:red;
+  font-weight: bold;
+}
+
+#Año {
+  font-size: 20px;
+}
+
+#Imagenes {
+  border-bottom: 0px;
+}
+
+#checkbox {
+  width: 5%;
+}
