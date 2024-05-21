@@ -880,7 +880,7 @@
   
   .img-page{
   background-color: var(--third-color);
-  background-image: url(/img/consecionaria.webp);
+  background-image: url(/img/consecionaria.png);
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: inset 0 0 0 2000px rgba(84, 84, 84, 0.7);
