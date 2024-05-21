@@ -142,10 +142,8 @@
   /* Estilo para la tarjeta del banner */
   .card-banner {
     margin: 0 auto;
-    /* Se utiliza comúnmente para centrar horizontalmente un elemento dentro de su contenedor. */
     text-align: center;
     padding: 160px 0px;
-    /* Aplica un relleno de cero píxeles en la parte superior e inferior del elemento y un relleno de 160 píxeles en los lados izquierdo y derecho. */
   }
   
   .text-banner-compra {
@@ -178,9 +176,7 @@
     background-color: var(--third-color);
     margin: 0px 0px;
     padding: 10px 30px;
-    /* Se aplica un espacio de 10 píxeles a los cuatro lados (arriba, abajo, izquierda y derecha) del elemento. */
     border-radius: 5px;
-    /* Se establece un radio de curvatura de 10 píxeles para las esquinas del elemento. */
     color: #fff;
     font-weight: bold;
     cursor: pointer;
@@ -198,7 +194,6 @@
   
   .btn:hover {
     background-color: var(--primary-color) !important;
-    /*color: 2px solid var(--secondary-color);*/
   }
   
   /* Estilo para la barra de búsqueda */
@@ -210,7 +205,6 @@
     font-size: 16px;
     height: 45px;
     outline: none;
-    /* Se utiliza para quitar o eliminar el contorno visible que se muestra alrededor de un elemento cuando este obtiene el foco o se selecciona. */
     padding: 0px 20px;
     width: 50%;
   }
@@ -302,9 +296,7 @@
     color: white;
     font-size: 1rem;
   }
-  /* agos css */
-  /* ventas agos */
-  
+
   .text-banner-venta {
     margin-bottom: 30px;
     color: white;
@@ -316,9 +308,7 @@
   #banner-venta {
     background-image: url("https://cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/V5EVJ5RXDVHLDO4JLUTU7ANNYQ.jpg");
     background-size: cover;
-    /* determina cómo se ajusta el tamaño de la imagen de fondo para cubrir completamente el contenedor */
     background-position: top;
-    /* coloca la imagen en el centro tanto horizontal como vertical del elemento contenedor */
     height: 400px;
     box-shadow: inset 0 0 0 2000px rgba(84, 84, 84, 0.7);
     /* establece una sombra interna actúa como un filtro. */
@@ -327,17 +317,19 @@
   .body-card {
     width: 100%;
     height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    }
+
   .container-card {
-    width: 100%;
     display: flex;
-    max-width: 1100px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
   }
   .card {
-    width: 100%;
+    width: 300px;
     margin: 20px;
     border-radius: 6px;
     overflow: hidden;
@@ -374,7 +366,6 @@
     padding: 1.5em;
   }
   .content {
-    /*max-width: 1170px;*/
     margin-bottom: auto;
     margin-left: auto;
     padding: 1.5em;
@@ -429,7 +420,7 @@
     color: black;
     transition: backgraund-color 1s ease-out;
   }
-  /* footer agos */
+
   .footer {
     width: 100%;
     background-color: black;
@@ -466,15 +457,13 @@
   .footer .containerfooter .red-social a:hover {
     color: darkgrey;
   }
-  /* agos stock */
+
   /* CARD */
   .body-stock {
     width: 100%;
     height: auto;
     margin: 50px;
-    /*display: flex;
-      justify-content: center;
-      align-items: center;*/
+
   }
   .container-stock {
     display: flex;
@@ -548,7 +537,6 @@
     font-weight: bold;
   }
   
-  /* Estilo para el html "como funciona" */
   
   #banner-como-funciona {
     background-image: url("https://maipuusados.com.ar/wp-content/uploads/sites/5/2021/08/comoFunciona.png.webp");
@@ -880,7 +868,7 @@
   
   .img-page{
   background-color: var(--third-color);
-  background-image: url(/img/consecionaria.png);
+  background-image: url(../img/consecionaria.png);
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: inset 0 0 0 2000px rgba(84, 84, 84, 0.7);
